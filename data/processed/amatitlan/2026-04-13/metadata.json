@@ -1,0 +1,123 @@
+{
+  "lake": "Lago Amatitlán",
+  "date": "2026-04-13",
+  "source": {
+    "spectral_api": "Element 84 Earth Search STAC",
+    "spectral_collection": "sentinel-2-l1c",
+    "spectral_items": [
+      "S2B_15PYR_20260413_0_L1C",
+      "S2B_15PYS_20260413_0_L1C"
+    ],
+    "spectral_assets_read": [
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B07",
+      "B08",
+      "B8A",
+      "B11",
+      "B12"
+    ],
+    "quality_api": "Microsoft Planetary Computer STAC",
+    "quality_collection": "sentinel-2-l2a",
+    "quality_items": [
+      "S2B_MSIL2A_20260413T161829_R040_T15PYR_20260413T200138",
+      "S2B_MSIL2A_20260413T161829_R040_T15PYS_20260413T200138"
+    ],
+    "quality_asset_read": "SCL",
+    "read_strategy": "remote raster windows only; no complete scene downloaded"
+  },
+  "grid": {
+    "crs": "EPSG:32615",
+    "resolution_m": 20,
+    "width": 449,
+    "height": 390,
+    "transform": [
+      20.0,
+      0.0,
+      757440.0,
+      0.0,
+      -20.0,
+      1603420.0
+    ]
+  },
+  "radiometry": {
+    "formula": "reflectance=max(0,(DN-1000)/10000) for processing baseline >= 04.00; equivalent to Sentinel Hub harmonizeValues=true",
+    "processing_baselines": [
+      "05.12"
+    ]
+  },
+  "masking": {
+    "spatial": "OpenStreetMap lake polygon",
+    "excluded_scl_classes": [
+      0,
+      1,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "water": "water-body function from official Sentinel Hub Cyano Detection script",
+    "cyano_model_range": "0 to 500 mg/m3; values outside excluded"
+  },
+  "cyano_algorithm": {
+    "source": "https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/cyanobacteria_chla_ndci_l1c/",
+    "ndci": "(B05-B04)/(B05+B04)",
+    "chlorophyll_a": "826.57*NDCI^3 - 176.43*NDCI^2 + 19*NDCI + 4.071",
+    "rgb_not_used_for_statistics": true
+  },
+  "statistics": {
+    "lake": "amatitlan",
+    "date": "2026-04-13",
+    "satellite": "Sentinel-2B",
+    "scene_ids": "S2B_MSIL2A_20260413T161829_R040_T15PYR_20260413T200138;S2B_MSIL2A_20260413T161829_R040_T15PYS_20260413T200138",
+    "l1c_scene_ids": "S2B_15PYR_20260413_0_L1C;S2B_15PYS_20260413_0_L1C",
+    "mgrs_tiles": "15PYR;15PYS",
+    "total_lake_pixels": 37570,
+    "source_pixels": 37570,
+    "clear_pixels": 37035,
+    "water_pixels": 36034,
+    "valid_pixels": 36034,
+    "valid_percent": 95.91163162097418,
+    "masked_percent": 4.088368379025819,
+    "source_coverage_percent": 100.0,
+    "clear_percent": 98.57599148256588,
+    "floating_vegetation_pixels": 0,
+    "model_out_of_range_pixels": 0,
+    "excluded_scl_pixels": 535,
+    "note": "",
+    "mean_cyano": 6.730051040649414,
+    "median_cyano": 6.418089389801025,
+    "std_cyano": 1.4142240285873413,
+    "min_cyano": 3.9095053672790527,
+    "p10_cyano": 5.402963161468506,
+    "p25_cyano": 5.740999221801758,
+    "p75_cyano": 7.171545028686523,
+    "p90_cyano": 8.577902793884277,
+    "p95_cyano": 9.55850601196289,
+    "max_cyano": 22.036365509033203,
+    "mean_ndvi": -0.06399298459291458,
+    "median_ndvi": -0.07033146172761917,
+    "std_ndvi": 0.0386202298104763,
+    "min_ndvi": -0.1907387226819992,
+    "p10_ndvi": -0.10059887170791626,
+    "p25_ndvi": -0.08528432250022888,
+    "p75_ndvi": -0.05288080498576164,
+    "p90_ndvi": -0.02097197063267231,
+    "p95_ndvi": 0.005774156656116247,
+    "max_ndvi": 0.2979999780654907,
+    "mean_ndwi": 0.2942756116390228,
+    "median_ndwi": 0.30224621295928955,
+    "std_ndwi": 0.047795575112104416,
+    "min_ndwi": -0.10798122733831406,
+    "p10_ndwi": 0.23277278244495392,
+    "p25_ndwi": 0.2728494703769684,
+    "p75_ndwi": 0.32486388087272644,
+    "p90_ndwi": 0.3412967026233673,
+    "p95_ndwi": 0.35488125681877136,
+    "max_ndwi": 0.4561717212200165
+  }
+}
