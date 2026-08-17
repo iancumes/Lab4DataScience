@@ -1,0 +1,48 @@
+{
+  "amatitlan": {
+    "lake": "Lago Amatitlán",
+    "pattern": "fluctúa, con múltiples cambios entre aumentos y descensos",
+    "first_date": "2025-01-28",
+    "first_mean": 4.437684535980225,
+    "last_date": "2026-06-19",
+    "last_mean": 11.418869972229004,
+    "maximum_date": "2026-06-19",
+    "maximum_mean": 11.418869972229004,
+    "maximum_median": 10.691143035888672,
+    "maximum_std": 6.322733402252197,
+    "maximum_percentile_rank": 100.0,
+    "statistical_peak_dates": [
+      "2026-06-19",
+      "2026-04-28"
+    ],
+    "low_coverage_dates": [],
+    "valid_percent_range": [
+      89.56348150119777,
+      95.91163162097418
+    ],
+    "caution": "La serie es observacional y el indicador satelital es una estimación. Lluvia, temperatura o nutrientes son hipótesis, no causas probadas aquí."
+  },
+  "atitlan": {
+    "lake": "Lago Atitlán",
+    "pattern": "fluctúa, con múltiples cambios entre aumentos y descensos",
+    "first_date": "2025-01-18",
+    "first_mean": 0.8766459226608276,
+    "last_date": "2026-07-22",
+    "last_mean": 1.4336777925491333,
+    "maximum_date": "2026-04-13",
+    "maximum_mean": 2.188264846801758,
+    "maximum_median": 2.235476493835449,
+    "maximum_std": 0.7465928196907043,
+    "maximum_percentile_rank": 100.0,
+    "statistical_peak_dates": [],
+    "low_coverage_dates": [
+      "2025-04-13",
+      "2025-07-17"
+    ],
+    "valid_percent_range": [
+      6.731549587638456,
+      97.13383866735528
+    ],
+    "caution": "La serie es observacional y el indicador satelital es una estimación. Lluvia, temperatura o nutrientes son hipótesis, no causas probadas aquí."
+  }
+}

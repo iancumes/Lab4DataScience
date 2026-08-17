@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "checked_at_utc": "2026-08-17T03:19:49.170283+00:00",
+  "api_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
+  "collection": "sentinel-2-l2a",
+  "collection_title": "Sentinel-2 Level-2A",
+  "stac_version": "1.0.0",
+  "authentication": "anonymous catalog; temporary public SAS tokens for assets",
+  "l1c_source": {
+    "api_url": "https://earth-search.aws.element84.com/v1",
+    "collection": "sentinel-2-l1c",
+    "collection_title": "Sentinel-2 Level-1C",
+    "purpose": "bandas TOA para reproducir el script oficial L1C",
+    "authentication": "anonymous public AWS assets"
+  },
+  "reused_from_cache": true,
+  "note": "Esta corrida se ejecutó sin acceso saliente a earth-search.aws.element84.com ni a planetarycomputer.microsoft.com. La conexión real ya se había verificado en una ejecución previa con internet, que generó los 110 archivos en data/processed/ (22 observaciones x 5 archivos). Ese resultado se reutiliza aquí; el código de conexión real permanece en src/stac.py y se ejecuta solo si faltan productos."
+}
